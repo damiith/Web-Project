@@ -140,3 +140,25 @@
     transform: scale(0.5);
     transition: 0.5s;
 }
+
+.social li a:hover{
+    transform: scale(0.5) translateY(-15px);
+}
+
+/*media query*/
+@media(max-width:798px){
+    .showcase,
+    .showcase header {
+        padding: 40px;
+    }
+
+    .text h2{
+        font-size: 3em;
+    }
+
+    .text h3{
+        font-size: 2em;
+    }
+
+}
+

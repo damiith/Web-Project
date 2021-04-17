@@ -23,6 +23,10 @@
 
 }
 
+.showcase.active{
+    right: 300px;
+}
+
 .showcase header{
     position: absolute;
     top: 0;
@@ -143,6 +147,18 @@
 
 .social li a:hover{
     transform: scale(0.5) translateY(-15px);
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 /*media query*/

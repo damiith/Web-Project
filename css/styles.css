@@ -114,4 +114,29 @@
     margin-top: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    transition: 0.4s;
+}
+
+.text a:hover{
+    letter-spacing: 6px;
+}
+
+.social{
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social li{
+    list-style: none;
+}
+
+.social li a{
+    display: inline-block;
+    margin-right: 20px;
+    transform: scale(0.5);
+    transition: 0.5s;
 }

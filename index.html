@@ -9,16 +9,16 @@
 
 
 <body>
-  <section class="showcase active">
+  <section class="showcase">
     <header>
       <h2 class="logo">zero2hero</h2>
-      <div class="toggle active"></div>
+      <div class="toggle"></div>
     </header>
 
    <video src="./videos/web.mp4" muted loop autoplay></video>
 
     <div class="overlay"></div>
-
+ 
     <div class="text">
       <h2>Be The Change</h2>
       <h3>you want to see in the world</h3>
@@ -49,6 +49,15 @@
   </div>
 
 
+  <script>
+    const menuToggle = document.querySelector('.toggle')
+    const showcase = document.querySelector('.showcase')
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active')
+        showcase.classList.toggle('active')
+    })
+  </script><!--active open & close nav bar-->
 
 
 </body>

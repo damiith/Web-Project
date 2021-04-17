@@ -16,7 +16,9 @@
     padding: 100px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #00072D;
+    color: white;
     z-index: 2;
 
 }
@@ -65,4 +67,32 @@
     height: 100%;
     object-fit: cover;
     opacity: 0.8;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.5) ;
+}
+
+.text{
+    position: relative;
+    z-index: 10;
+}
+
+.text h2{
+    font-size: 3em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text h3{
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
 }

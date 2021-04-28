@@ -34,9 +34,13 @@
     justify-content: space-between;
 }
 
-.lag{
-    text-transform: uppercase;
+.logo{
+    margin-top: 10px;
     cursor: pointer;
+    font-size: 23px;
+    font-weight: 750;
+    line-height: 1em;
+    text-transform: uppercase;
 }
 
 

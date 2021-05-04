@@ -83,6 +83,50 @@
     text-transform: uppercase;
 }
 
+.text p{
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: 400;
+    max-width: 700px;
+}
+
+.text a{
+    
+}
+
+.text a:hover{
+    letter-spacing: 6px;
+}
+
+.social{
+}
+
+.social li{
+    list-style: none;
+}
+
+.social li a{
+    display: inline-block;
+    margin-right: 20px;
+    transform: scale(0.5);
+    transition: 0.5s;
+}
+.social li{
+    width: 100%;
+    border: 1px solid white;
+    list-style: none;
+    display: flex;
+}
+.social li button{
+    height: 70px;
+    width: 250px;
+    margin-left: 50px;
+}
+
+.social li a:hover{
+    transform: scale(0.5) translateY(-15px);
+}
+
 
     .text h2{
         font-size: 3em;

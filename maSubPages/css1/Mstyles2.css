@@ -104,30 +104,28 @@
     text-transform: uppercase;
 }
 
-.text h4{
-    font-size: 2em;
-    font-weight: 700;
-    line-height: 1em;
-    text-transform: uppercase;
-}
-
 .text p{
-    font-size: 23px;
+    font-size: 2em;
     margin: 20px 0;
-    font-weight: 700;
+    font-weight: 400;
+    max-width: 700px;
 }
 
- a  p{
-    font-size: 23px;
-    margin: 20px 0;
-    font-weight: 700;
-    color: white;
+.text a{
+    display: inline-block;
+    font-size: 1em;
+    background: white;
+    padding: 10px 30px;
     text-decoration: none;
-    
+    color: black;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.4s;
 }
 
 .text a:hover{
-
+    letter-spacing: 6px;
 }
 
 .social{
@@ -135,29 +133,30 @@
 
 .social li{
     list-style: none;
-    border:2px solid #020D15;
-    border-radius: 20px;
 }
 
 .social li a{
-    display: flex;
-    text-decoration: none;
-
+    display: inline-block;
+    margin-right: 20px;
+    transform: scale(0.5);
+    transition: 0.5s;
 }
 .social li{
-    width: 80%;
-    display: flex;
+    margin-top: 30px;
+    width: 100%;
+    border: 1px solid white;
+    font-size: 20px;
+    padding: 10px;
+    background-color: blue;
 }
 .social li button{
-    height: 70px;
+    height: 100px;
     width: 250px;
+    color: white;
 }
 
-.social li:hover{
-    width: 80%;
-    background-color:  #031B2A;
-    transform: scale(1.1) translateY(5px);
-    
+.social li a:hover{
+    transform: scale(0.5) translateY(-15px);
 }
 
 .menu{
@@ -172,23 +171,26 @@
 
 }
 
+.menu ul{
+    position: relative;
+    list-style: none;
+}
 
+.menu ul li a{
+    text-decoration: none;
+    font-size: 35px;
+    color: black;
+}
 
+.menu ul li a:hover{
+    color: #A6E1FA ;
+}
 .square{
-    margin-top: 70px;
-    padding-top: 40px;
-    background-color: black;
-    height:800px;
-
+    margin: 10px;
 }
 .log{
-    margin-top: 70px;
-    padding-top: 40px;
-    background-color: black;
-    height:800px;
-
-
-    
+    margin-top:70px;
+    border: 5px solid orange;
 }
 .loga{
     
@@ -196,6 +198,20 @@
 
 
 /*media query*/
+@media(max-width:798px){
+    .showcase,
+    .showcase header {
+        padding: 40px;
+    }
 
+    .text h2{
+        font-size: 3em;
+    }
+
+    .text h3{
+        font-size: 2em;
+    }
+
+}
 
 

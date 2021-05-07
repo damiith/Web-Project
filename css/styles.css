@@ -65,7 +65,7 @@
 }
 
 .showcase video{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -176,7 +176,6 @@
 .menu ul li a:hover{
     color: #A6E1FA ;
 }
-
 
 /*media query*/
 @media(max-width:798px){

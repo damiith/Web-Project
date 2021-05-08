@@ -168,4 +168,10 @@
         width: 100%;
 
     }
+   
+    .logo{
+        text-transform: uppercase;
+        cursor: pointer;
+        color: white;
+    }
 }

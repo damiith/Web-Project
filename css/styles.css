@@ -75,7 +75,7 @@
 }
 
 .overlay{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -128,11 +128,12 @@
 
 .social{
     position: absolute;
-    bottom: 20px;
+    bottom: 30%;
     z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 42%;
 }
 
 .social li{
@@ -191,6 +192,7 @@
     .text h3{
         font-size: 2em;
     }
+    
 
 }
 

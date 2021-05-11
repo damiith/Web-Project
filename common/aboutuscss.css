@@ -8,3 +8,39 @@
     z-index: 1;
     
 }
+
+.img-pad{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    z-index:3;
+  }
+  
+  .line{
+    border-bottom: 2px solid white;
+    z-index: 3;
+  }
+
+  .overlay {
+    background-color:rgba(39, 148, 199, 0.418);
+    z-index: 1;
+  }
+
+  .welcome {
+    font-weight: 400;
+  }
+
+  .line_2 {
+    background-color: yellow;
+    height: 1%;
+    width: 25%;
+    padding: 0;
+  }
+
+  p.in {
+    color: rgb(73 73 73 / 65%);
+  }
+
+  .nav-link{
+    background-color: inherit;
+
+  }

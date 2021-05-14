@@ -43,6 +43,7 @@
 .logo{
     text-transform: uppercase;
     cursor: pointer;
+    transform: scale(0.5);
 }
 
 .toggle{

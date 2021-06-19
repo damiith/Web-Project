@@ -133,7 +133,11 @@
 
 <section class="home">
   <video class="video-slide" src="./videos/web.mp4" autoplay muted loop></video>
-
+  <video class="video-slide" src="./videos/web2.mp4" autoplay muted loop></video>
+  <video class="video-slide" src="./videos/web3.mp4" autoplay muted loop></video>
+  <video class="video-slide" src="./videos/web4.mp4" autoplay muted loop></video>
+  <video class="video-slide" src="./videos/web5.mp4" autoplay muted loop></video>
+  
   <div class="content">
     <h1>Welcome<br> <span>Hero</span> </br></h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quas enim, ab vel dicta corrupti omnis rem quod eveniet necessitatibus placeat error mollitia possimus, temporibus, recusandae sint architecto. Non earum pariatur dolor. Magni, nihil rerum quas ipsa modi molestias beatae exercitationem ipsum cumque neque praesentium ex natus veritatis odio aliquam!</p>
@@ -144,6 +148,15 @@
     <a href="#"> <i class="fab fa-instagram"></i> </a>
     <a href="#"> <i class="fab fa-twitter"></i> </a>
   </div>
+
+  <div class="slider-navigation">
+    <div class="nav-btn active"></div>
+    <div class="nav-btn"></div>
+    <div class="nav-btn"></div>
+    <div class="nav-btn"></div>
+    <div class="nav-btn"></div>
+</div>
+
 </section>
 
 <script type="text/javascript">
@@ -156,6 +169,26 @@ menuBtn.addEventListener("click", () =>{
     menuBtn.classList.toggle("active");
     navigation.classList.toggle("active");
 } );
+
+//Javascript of video slider navigation 
+const btns = document.querySelectorAll(".nav-btn");
+
+var sliderNav =  function(manual){
+  btns.forEach((btn) => {
+        btn.classList.remove("active");
+    });
+
+
+
+
+   btns[manual].classList.add("active");
+ }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+    });
+   });
 </script>
 
 

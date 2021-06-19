@@ -282,6 +282,11 @@ section{
     color: #fff;
     width: 70%;
     margin-top: 50px;
+    display: none ;
+}
+
+.home .content.active{
+    display: block;
 }
 
 .home .content h1{
@@ -370,7 +375,7 @@ section{
 
 .slider-navigation .nav-btn.active{
     background: #2696e9;
-    
+
 }
 
 .slider-navigation .nav-btn:not(:last-child){
@@ -380,6 +385,18 @@ section{
 
 .slider-navigation .nav-btn:hover{
     transform: scale(1.2);
+}
+
+.video-slide{
+    position: absolute;
+    width: 100%;
+    clip-path:  circle(0% at 0 50%);
+}
+
+.video-slide.active{
+    clip-path: circle(150.0% at 0 50%);
+    transition: 2s ease ;
+    transition-property: clip-path;
 }
 
 @media (max-width: 1040px){

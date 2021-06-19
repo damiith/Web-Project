@@ -15,106 +15,80 @@
             padding: 0;
             font-family: 'Poppins' , sans-serif;
 }
-        .image-cover {
+
+        .image-cover{
+
             background-image: url("../img/login.jpg");
-            position: relative;
-            min-height: 100vh;
-            padding: 50px 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            z-index: 1;
+            height:100vh;
+            width:100%;
+            background-position: center;
+            background-repeat: no-repeat;
             background-size: cover;
+            padding-top: 10%;
+            padding-bottom: 10%;   
         }
 
-        .content {
-            background-color: white;       
-            width: 50%;
-            height: auto;
-            padding: 20px 30px;
-            border-radius: 2%;
-            border-top: 1em solid #0dcaf0;
-
+        .border{
+            border: solid cyan 1px;
         }
 
-     
+
+        
 
     </style>
 </head>
 <body>
 
+<section class ="image-cover">
 
-   <section class ="image-cover">
-    <h2><img src="zlogo.png" alt="Zero2Hero" width="350" height="100"></h2>
-    <br>
-        <form class="content">
-            <div class="display-4 mb-4 fw-bold py-3 text-center">
-                <span class="text-info ">Sign Up</span>
+
+    <div class="border row m-5 p-5 ms-5 me-5">
+        
+        <div class="col-md-6 p-3 my-auto text-info ">
+            <div class="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10em" height="10em" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                    <div class="display-1 text-white">Sign Up</div>
+                </svg>
             </div>
-            <div class="input-group mb-2 pt-5">
-               <span class="input-group-text  ">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-                    </svg>
-                </span>
-                <input  class="input-group form-control" type="text" name="" placeholder="Enter your Username" required="">
-                <div class="invalid-feedback">
-                    You must enter your User.
+        </div>
+        
+        <div class="col-md-6 bg-white p-5 rounded">
+            <form id="form" action="#" method="POST" >
+                <div class="p-2 me-5 mb-5">
+                    <label class="text-dark" for="username">Username</label>
+                    <input type="text"  name="username" id="name" class="form-control">
+                    <small>Error Message</small>
                 </div>
-            </div>
-            <div class="input-group mb-2 pt-2">
-                <span class="input-group-text  ">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
-                    </svg>
-                </span>
-                <input  class="input-group form-control" type="email" name="" placeholder="Enter your Email" required="">
-                <div class="invalid-feedback">
-                    You must enter your Email.
+
+                <div class="p-2 me-5 mb-5">
+                    <label class="text-dark" for="email">Email</label>
+                    <input type="email" required name="email" id="email" class="form-control">
+                    <div class="text-danger" id="Error"></div>    
                 </div>
-            </div>
-            <div class="input-group mb-2 pt-2">
-                <span class="input-group-text  ">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
-                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
-                    </svg>
-                </span>
-                <input  class="input-group form-control" type="password" name="" placeholder="Enter Password" required="">
-                <div class="invalid-feedback">
-                    You must enter password.
+
+                <div class="p-2 me-5 mb-5">
+                    <label class="text-dark" for="password">Password</label>
+                    <input type="password" required name="password" id="password" class="form-control">
+                    <div class="text-danger" id="password_error_msg"></div>    
                 </div>
-            </div>
-            <div class="input-group mb-2 pt-2">
-                <span class="input-group-text  ">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
-                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
-                    </svg>
-                </span>
-                <input  class="input-group form-control" type="password" name="" placeholder="Renter Password" required="">
-                <div class="invalid-feedback">
-                    You must enter password.
+                
+                <div class="p-2 me-5 mb-5">
+                    <label class="text-dark" for="repassword">Re type Password</label>
+                    <input type="password" required name="rpassword" id="rpassword" class="form-control">
+                    <div class="text-danger" id="Error"></div>    
                 </div>
-            </div>
-            <div class="form-check pt-2" style="padding-left: 2em;">
-                <input class="form-check-input is-valid" type="checkbox" value="" id="invalidCheck3" required="">
-                    <label class="form-check-label" style="padding-top:0.1em" for="invalidCheck3">
-                  Agree to terms and conditions
-                    </label>
-              </div>
-            <div class="justify-content-center d-md-flex">
-                    <button type="submit" class="btn btn-primary btn-lg btn-outline-info text-uppercase mt-5 col-3">Create</button>
-            </div>
 
-
-
-        </form>
-
-       
-    </section>
+                <div class="p-2 mb-3 text-center">
+                <button type="submit" id="register" onclick="validate();" class="btn btn-lg btn-primary ">Register ➠</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-
 </body>
 </html>

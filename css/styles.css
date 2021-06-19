@@ -399,6 +399,11 @@ section{
     transition-property: clip-path;
 }
 
+.footer{
+    padding: 1px;
+}
+
+
 @media (max-width: 1040px){
 
     header{

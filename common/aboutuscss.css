@@ -1,46 +1,57 @@
-.image{
-    background-image: url(bgim.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    width: 100%;
-    height: 100%;
-    margin-top: 0%;
-    z-index: 1;
-    
-}
+    .style-1{
+        width: 100%;
+        height: 100vh;
+    }
 
-.img-pad{
-    padding-top: 5%;
-    padding-bottom: 5%;
-    z-index:3;
-  }
-  
-  .line{
-    border-bottom: 2px solid white;
-    z-index: 3;
-  }
+    .style-2{
+        width:100%;
+    }
 
-  .overlay {
-    background-color:rgba(39, 148, 199, 0.418);
-    z-index: 1;
-  }
+    .topic{
+        background-color:  #6c757d38;
+        color: #3a3a3bad;
+    }
 
-  .welcome {
-    font-weight: 400;
-  }
+    .mission{
+        padding-left: 2em;
+    }
 
-  .line_2 {
-    background-color: yellow;
-    height: 1%;
-    width: 25%;
-    padding: 0;
-  }
+    .mission-1{
+        border-bottom: 2px solid black ;
+    }
 
-  p.in {
-    color: rgb(73 73 73 / 65%);
-  }
+    .col-img{
+        background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP._OQbFyIqBdkSGUHxHtDougHaEK%26pid%3DApi&f=1");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width:100%;
+        height: 70%;
+        margin-top: 5vh;
+        margin-left: -5vh;
+        border-radius: 12px;
+    }
 
-  .nav-link{
-    background-color: inherit;
+    .head-1{
+        background: rgb(153,201,109);
+        background: linear-gradient(90deg, rgba(153,201,109,1) 0%, rgba(0, 255, 187, 0.537) 45%, rgba(0, 255, 30, 0.449) 100%);
+    }
 
-  }
+    .text-height-0 {
+        line-height: 1!important;
+    }
+    .text-height-1 {
+        line-height: 1.5!important;
+    }
+    .text-height-2 {
+        line-height: 2!important;
+    }
+    .text-height-3 {
+        line-height: 2.5!important;
+    }
+    .text-height-4 {
+        line-height: 3!important;
+    }
+    .text-height-5 {
+        line-height: 3.5!important;
+    }

@@ -34,5 +34,98 @@
   color:#fff;
 }
 
+@media(max-width:700px)
+  {
+    .txt h1{
+      font-size:20px;
+    }
+    
+    .txt p{
+      font-size:15px;
+    }
+    
+}
+
+/* s1 section css */
+
+.s1
+{
+  background-image : url(img/scts.png);
+  background-position:center;
+  background-size:cover;
+  position:relative;
+  width:100%;
+  margin:auto;
+  text-align:center;
+  padding-top: 100px;
+  
+}
+
+h1{
+  font-size:36px;
+  font-weight:600;
+  
+}
+
+p{
+  color:rgb(255,255,255);
+  font-size:20px;
+  font-weight:bolder;
+  line-height:22px;
+  padding:10px;
+  
+}
+
+.row1
+{
+  margin-top:5%;
+  display:flex;
+  justify-content: space-between;
+  
+}
+
+.s1-col
+{
+  flex-basis:32%;
+  border-radius:10px;
+  margin-bottom:30px;
+  position:relative;
+  overflow:hidden;
+}
+
+.s1-col img{
+  width:100%;
+  height:50%;
+  display:block;
+}
+
+.s2-col h3{
+  text-align:center;
+  font-weight:bolder;
+  margin:10px 0;
+  background-color:rgb(0,140,255);
+  color:rgba(1,30,128,0.692);
+}
+
+.s1-col:hover{
+  box-shadow: 0 0 20px 20px rgba(80,214,255,0.466);
+}
+
+@media(max-width:700px)
+  {
+    .row1{
+      flex-direction: column;
+    }
+}
+
+
+
+
+  
+
+  
+
+
+
 
   

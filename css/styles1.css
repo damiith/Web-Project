@@ -128,6 +128,29 @@
     padding-bottom: 20px;
 
 }
+.grade9{
+    margin-top: 60px;
+    border: 2px solid white;
+
+}
+.grade9 .card{
+    margin-right: 20px;
+}
+.grade9 .row2{
+}
+.grade8{
+    border: 2px solid white;
+}
+
+}
+.grade7{
+    border: 2px solid white;
+
+}
+.grade6{
+    border: 2px solid white;
+
+}
 @media only screen and (max-width : 1200px){
     .card{
         width: 100%;

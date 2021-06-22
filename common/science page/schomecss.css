@@ -120,6 +120,113 @@ p{
 
 
 
+/* s2 section css */
+
+.s2{
+  background-image: url(img/books.jpg);
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top:50px;
+  
+}
+
+.s2 p{
+  color:#fff;
+  font-size: larger;
+}
+
+.s2 h1{
+  color: rgba(253,253,253,0.945);
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+.s2-cole{
+  flex-basis:32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow:hidden;
+  
+}
+
+.s2-cole img{
+  width:100%;
+  display:block;
+}
+
+.layer{
+  background: transparent;
+  height:100%;
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  transition:0.5s;
+}
+
+
+.layer:hover;
+{
+  background:rgba(80,214,255,0.466);
+}
+
+.layer h3{
+  width:100%;
+  font-weight:bolder;
+  color:rgba(26,1,107,0.904);
+  font-size:30px;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition:0.5s;
+}
+  
+
+.layer:hover h3{
+  bottom:49%;
+  opacity:1;
+}
+
+.lay h3{
+  width:100%;
+  font-weight:bolder;
+  color:rgba(26,1,107,0.904);
+  font-size:15px;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  position:absolute;
+  opacity:0;
+  transition:0.5s;
+  
+}
+
+.lay:hover h3{
+  bottom: 80%;
+  opacity:1;
+}
+
+.lay:hover{
+  background: rgba(129,122,131,0.466);
+  
+}
+
+.lay{
+  background:transparent;
+  height:100%;
+  width:100%;
+  position:absolute;
+  top :0;
+  left:0;
+    transition: 0.5s;
+
+}
+
+
 
   
 

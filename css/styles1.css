@@ -97,7 +97,7 @@
 }
 
 .card{
-    padding-left:20px;
+    padding-left:100px;
 }
 
 .card-body{
@@ -128,3 +128,70 @@
     padding-bottom: 20px;
 
 }
+@media only screen and (max-width : 1200px){
+    .card{
+        width: 100%;
+        border: 1px solid white;
+    }
+}
+@media only screen and (max-width : 1150px) {
+    .card{
+        height: 300px;
+        width: 90px;
+        border: 1px solid white;
+
+    }
+    .row1{
+        margin-bottom: 20px;
+    }
+   .OL{
+    height: auto;
+    padding-bottom: 150px;
+   }
+   .row2{
+    margin-top: 100px;
+    padding-bottom: 50px;
+   }
+    
+}
+
+
+@media only screen and (max-width : 1000px) {
+    
+    .card{
+        height: 400px;
+        width: 300px;
+        border: 1px solid white;
+
+    }
+    .row1{
+        flex-wrap: wrap;
+    }
+   .OL{
+    height: auto;
+   }
+   .row2{
+    flex-wrap: wrap;
+
+   }
+}
+@media only screen and (max-width : 500px) {
+    
+    .card{
+        height: 320px;
+        width: 300px;
+        border: 1px solid white;
+
+    }
+    .row1{
+        flex-wrap: wrap;
+    }
+   .OL{
+    height: auto;
+   }
+   .row2{
+    flex-wrap: wrap;
+
+   }
+}
+

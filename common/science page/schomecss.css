@@ -167,7 +167,7 @@ p{
 }
 
 
-.layer:hover;
+.layer:hover
 {
   background:rgba(80,214,255,0.466);
 }
@@ -201,7 +201,7 @@ p{
   transform:translateX(-50%);
   position:absolute;
   opacity:0;
-  transition:0.5s;
+  transition:0.8s;
   
 }
 
@@ -234,8 +234,9 @@ p{
   bottom:0;
   left:50%;
   transform:translateX(-50%);
+  position: absolute;
   opacity:0;
-  transition:0.5;
+  transition:0.5s;
 }
 
 .lay:hover p{

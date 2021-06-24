@@ -1,0 +1,46 @@
+body{
+	background-color: #272E36;
+}
+.card-body{
+	background-color: black;
+	color: white;
+	 font-weight: 600;
+}
+*{
+   
+    font-family: 'Poppins' , sans-serif;
+    font-weight: 600;
+} /*universal selector*/
+.card-title{
+	 font-weight: 600;
+	 font-size: 24px;
+}
+.card-title{
+	text-transform: uppercase;
+}
+.card a{
+	text-decoration: none;
+}
+.text h3{
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+}
+.text h2{
+    font-size: 3em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: white;
+}
+.text p{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1em;
+      text-align: center;
+    color: white;
+}
+

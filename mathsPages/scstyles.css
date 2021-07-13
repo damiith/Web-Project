@@ -1,0 +1,317 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+
+*{
+  margin : 0;
+  padding : 0;  
+  font-family: 'Poppins' , sans-serif;
+}
+
+
+.edit{
+    min-height: 100vh;
+    width:100%;
+    background-image: url(images/coverimg.jpg);
+    background-position:center;
+    background-size:cover;
+    position:relative;
+}
+
+.txt{
+    width: 90%;
+    color:#fff;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align:center;
+}
+
+
+.txt h1{
+    font-size:60px;
+}
+
+
+.txt p{
+    margin:10px 0 40px;
+    font-size: 19px;
+    color:#fff;
+
+}
+
+
+nav .fa{
+    display: none;
+}
+
+
+@media(max-width: 700px){
+
+    .txt h1{
+        font-size:20px;
+    }
+    .txt p{
+        font-size: 15px;
+    }
+    
+    .nav-links ul li{
+        display : block;
+    }
+
+    .nav-links{
+        position: absolute;
+        background:#f44336;
+        height: 100vh;
+        width: 200px;
+        top : 0;
+        right: -200px;
+        text-align: left;
+        z-index:2;
+        transition: 1s;
+    }
+
+    nav .fa{
+        display:block;
+        color:#fff;
+        margin:10px;
+        font-size: 22px;
+        cursor:pointer;
+    }
+
+    .nav-links ul{
+        padding:30px;
+    }
+
+
+
+}
+
+
+
+/*----- Get intro -----*/
+
+.intro{
+    background-image: url(images/coverimg1.jpg);
+    background-position:center;
+    background-size:cover;
+    position:relative;
+    width:100%;
+    margin:auto;
+    text-align: center;
+    padding-top:100px;
+}
+
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+
+.intro p{
+    color:rgb(255, 255, 255);
+    font-size:20px;
+    font-weight:bolder;
+    line-height:22px;
+    padding:10px;
+}
+
+
+.rowe{
+    margin-top:5%;
+    display:flex;
+    justify-content: space-between;
+}
+
+
+.intro-col{
+    flex-basis:32%;
+border-radius: 10px;
+margin-bottom:30px;
+position: relative;
+overflow:hidden;
+}
+
+
+.intro-col img{
+    width:100%;
+    height: 50%;
+    display:block;
+
+}
+
+
+.books-col h3{
+    text-align:center;
+    font-weight:bolder;
+    margin:10px 0;
+    background-color: rgb(0, 140, 255);
+    color:rgba(1, 30, 128, 0.692)
+
+}
+
+
+.intro-col:hover{
+    box-shadow: 0 0 20px 20px rgba(80, 214, 255, 0.466);
+}
+
+
+@media(max-width:700px){
+  .rowe{
+      flex-direction: column;
+  }
+
+}
+
+
+
+
+/*----textbook------*/
+
+.books{
+    background-image: url(img/back.jpg);
+    width: 100%;
+    margin : auto;
+    text-align : center;
+    padding-top: 50px;
+
+}
+
+
+.books p {
+    color:#fff;
+    font-size: larger;
+}
+
+
+.books h1{
+    color: rgba(253, 253, 253, 0.945);
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+
+.books-cole{
+flex-basis:32%;
+border-radius: 10px;
+margin-bottom:30px;
+position: relative;
+overflow:hidden;
+}
+
+
+.books-cole img{
+    width:100%;
+    display:block;
+
+}
+
+
+.layer{
+    background: transparent;
+    height:100%;
+    width :100%;
+    position:absolute;
+    top:0;
+    left:0;
+    transition: 0.5s;
+
+}
+
+
+.layer:hover{
+   background:  rgba(80, 214, 255, 0.466);
+
+
+}
+
+
+.layer h3{
+    width:100%;
+    font-weight:bolder;
+    color:white;
+    font-size: 30px;
+    bottom:0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+
+    
+}
+
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+
+}
+
+
+.lay h3 {
+    width:100%;
+    font-weight:bolder;
+    color:rgba(26, 1, 107, 0.904);
+    font-size: 15px;
+    bottom:0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s; 
+}
+
+
+.lay:hover h3 {
+    bottom: 80%;
+    opacity: 1;
+
+}
+
+
+.lay:hover{
+    background:  rgba(129, 122, 131, 0.466);
+ 
+ 
+ }
+
+
+ .lay{
+    background: transparent;
+    height:100%;
+    width :100%;
+    position:absolute;
+    top:0;
+    left:0;
+    transition: 0.5s;
+
+}
+
+
+.lay p {
+    width:100%;
+    font-weight:600;
+    color:white;
+    font-size: 25px;
+    bottom:0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s; 
+}
+
+
+.lay:hover p {
+    bottom: 5%;
+    opacity: 1;
+
+}
+
+.text-reset
+{
+    color:rgb(119, 0, 0);
+}

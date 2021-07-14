@@ -1,0 +1,21 @@
+.card{
+    background-image: url(img/g7.jpg);
+   color:rgb(0, 0, 0) ;
+}
+
+
+p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+h2{ 
+    font-size: 30px;
+    color:rgb(0, 108, 197);
+    text-align: center;
+}
+
+body{
+    background-image: url(img/g7.jpg);
+}

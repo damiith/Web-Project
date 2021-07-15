@@ -56,8 +56,9 @@
                     <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
                     <div class="text">
                         <h3>Address</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur,<br>
-                            adipisicing elit. Perferendis, quo.</p>
+                        <p>Mahenwaththa<br>
+                            Pitipana,Homagama,<br> 
+                              Sri Lanka</p>
                     </div>
                 </div>
                 <div class="box">
@@ -65,7 +66,7 @@
                     </div>
                     <div class="text">
                         <h3>Phone</h3>
-                        <p>+94-12345678</p>
+                        <p>+94 11 5445000</p>
                     </div>
                 </div>
                 <div class="box">

@@ -1,3 +1,6 @@
+<?php
+  include_once 'dbconnect.php';
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"rel="stylesheet"/>
-    
+
     <title>Contact</title>
 </head>
 <body>
@@ -35,10 +38,10 @@
             <li><a href="#" class="nav-link px-2 text-white"></a></li>
             <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
           </ul>
-          
+
           <div class="col-md-3 text-center">
-           <a href="./login.html"><button type="button" class="btn btn-outline-primary me-2">Login</button></a> 
-           <a href="./signup.html"><button type="button" class="btn btn-primary">Sign-up</button></a> 
+           <a href="./login.html"><button type="button" class="btn btn-outline-primary me-2">Login</button></a>
+           <a href="./signup.html"><button type="button" class="btn btn-primary">Sign-up</button></a>
           </div>
         </header>
 
@@ -53,8 +56,8 @@
                     <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
                     <div class="text">
                         <h3>Address</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur,<br> 
-                            adipisicing elit. Perferendis, quo.</p> 
+                        <p>Lorem ipsum dolor sit amet consectetur,<br>
+                            adipisicing elit. Perferendis, quo.</p>
                     </div>
                 </div>
                 <div class="box">
@@ -62,34 +65,34 @@
                     </div>
                     <div class="text">
                         <h3>Phone</h3>
-                        <p>+94-12345678</p> 
+                        <p>+94-12345678</p>
                     </div>
                 </div>
                 <div class="box">
                     <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
                     <div class="text">
                         <h3>Email</h3>
-                        <p>zero2hero.edu@outlook.com</p> 
+                        <p>zero2hero.edu@outlook.com</p>
                     </div>
                 </div>
             </div>
             <div class="contactForm">
-                <form action="">
+                <form action="" method="POST">
                     <h2>Send Message</h2>
                     <div class="inputBox">
-                        <input type="text" name="" required="required">
+                        <input type="text" name="fname" required="required">
                         <span>Full Name</span>
                     </div>
                     <div class="inputBox">
-                        <input type="text" name="" required="required">
+                        <input type="email" name="email" required="required">
                         <span>Email</span>
                     </div>
                     <div class="inputBox">
-                        <textarea required="required"></textarea>
+                        <textarea required="required" name="message"></textarea>
                         <span>Type your Message</span>
                     </div>
                     <div class="inputBox">
-                        <input type="submit" name="" value="Send">
+                        <input type="submit" name="Submit" value="Send">
                 </form>
             </div>
         </div>
@@ -106,7 +109,7 @@
             <span>Get connected with us on social networks:</span>
           </div>
           <!-- Left -->
-      
+
           <!-- Right -->
           <div>
             <a href="https://www.facebook.com/Zero2Hero.lk/" target="_blank" class="me-4 text-reset">
@@ -115,16 +118,16 @@
             <a href="https://twitter.com/Zero2Hero_lk" target="_blank" class="me-4 text-reset">
               <i class="fab fa-twitter"></i>
             </a>
-            
+
             <a href="https://www.instagram.com/zero2hero.lk/" target="_blank" class="me-4 text-reset">
               <i class="fab fa-instagram"></i>
             </a>
-           
+
           </div>
           <!-- Right -->
         </section>
         <!-- Section: Social media -->
-      
+
         <!-- Section: Links  -->
         <section class="">
           <div class="container text-center text-md-start mt-5">
@@ -142,7 +145,7 @@
                 </p>
               </div>
               <!-- Grid column -->
-      
+
               <!-- Grid column -->
               <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                 <!-- Links -->
@@ -163,7 +166,7 @@
                 </p>
               </div>
               <!-- Grid column -->
-      
+
               <!-- Grid column -->
               <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                 <!-- Links -->
@@ -184,7 +187,7 @@
                 </p>
               </div>
               <!-- Grid column -->
-      
+
               <!-- Grid column -->
               <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                 <!-- Links -->
@@ -205,7 +208,7 @@
           </div>
         </section>
         <!-- Section: Links  -->
-      
+
         <!-- Copyright -->
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
           © 2021 Copyright:
@@ -221,3 +224,23 @@
 
 </body>
 </html>
+<?php
+  if(isset($_POST['Submit'])){
+    $name = $_POST['fname'];
+    $email = $_POST['email'];
+    $msg = $_POST['message'];
+
+    $sql = "INSERT INTO contact_us (name,email,message) VALUES('$name','$email','$msg')";
+
+    if(mysqli_query($conn,$sql)){
+
+      echo "<script>alert('Successfully Sended');</script>";
+      //header("Location: login.php");
+    }else{
+      echo "<script>alert('Try Again')</script>";
+    }
+  }
+
+  mysqli_close($conn);
+
+ ?>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"rel="stylesheet"/>
     <link rel="stylesheet" href="../css/styles.css">
@@ -31,7 +31,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             padding-top: 10%;
-            padding-bottom: 10%;   
+            padding-bottom: 10%;
         }
 
         .border{
@@ -45,14 +45,14 @@
             font-weight: lighter;
         }
 
-    
+
     </style>
 </head>
 <body>
 <header class="pb-5">
     <a href="../index.html" class="brand"><img src="../img/zlogo.png" width="250" ></a>
     <div class="menu-btn"></div>
-    
+
     <div class="navigation">
         <div class="navigation-items">
             <a href="../index.html">Home</a>
@@ -69,7 +69,7 @@
 
 <section class ="image-cover">
     <div class="border row m-5 p-5 ms-5 me-5">
-        
+
         <div class="col-md-6 p-3 my-auto text-info ">
             <div class="text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="10em" height="10em" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
@@ -79,9 +79,9 @@
                 </svg>
             </div>
         </div>
-        
+
         <div class="col-md-6 bg-white p-5 rounded">
-            <form id="registerForm"  action="#" method="POST">
+            <form id="registerForm"  action="" method="POST">
                 <div class="p-2 me-5 mb-2">
                     <label class="text-dark" for="username">Username</label>
                     <input type="text"  name="username" class="form-control">
@@ -96,15 +96,16 @@
                     <label class="text-dark" for="password">Password</label>
                     <input type="password" name="password" id="password" class="form-control">
                 </div>
-                
+
                 <div class="p-2 me-5 mb-2">
                     <label class="text-dark" for="repassword">Re type Password</label>
                     <input type="password" name="confirm" class="form-control">
                 </div>
 
                 <div class="p-2 mb-3 text-center">
-                <button type="submit" class="btn btn-lg btn-primary ">Register ➠</button>
+                <button type="submit" name="signup" class="btn btn-lg btn-primary ">Register ➠</button>
                 </div>
+                <p class="ps-3">Already have an account? <a href="login.php">Login here</a>.</p>
             </form>
         </div>
     </div>
@@ -113,7 +114,7 @@
 
     <!--Footer-->
 <footer class="text-center text-lg-start bg-dark text-muted">
-    
+
     <!-- Section: Links  -->
     <section class="footer">
     <div class="container text-center text-md-start mt-5">
@@ -271,3 +272,24 @@ jQuery.validator.addMethod("customEmail", function(value, element) {
 </script>
 </body>
 </html>
+
+<?php
+  if(isset($_POST['signup'])){
+    $uname = $_POST['username'];
+    $email = $_POST['email'];
+    $pwd = md5($_POST['password']);
+
+    $sql = "INSERT INTO signup (username,email,password) VALUES ('$uname','$email','$pwd')";
+
+    if(mysqli_query($conn,$sql)){
+      header("Location:login.php");
+      echo "<script>alert('Successfully Sended')</script>";
+    }else{
+      echo "<script>alert('Try Again')</script>";
+    }
+  }
+
+  mysqli_close($conn);
+
+
+ ?>

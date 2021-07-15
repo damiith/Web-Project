@@ -36,12 +36,12 @@
             <li><a href="#" class="nav-link px-2 text-white"></a></li>
             <li><a href="AboutUs.html" class="nav-link px-2 text-white">About Us</a></li>
             <li><a href="#" class="nav-link px-2 text-white"></a></li>
-            <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+            <li><a href="contact.php" class="nav-link active">Contact Us</a></li>
           </ul>
 
           <div class="col-md-3 text-center">
            <a href="./login.html"><button type="button" class="btn btn-outline-primary me-2">Login</button></a>
-           <a href="./signup.html"><button type="button" class="btn btn-primary">Sign-up</button></a>
+           <a href="./signup.php"><button type="button" class="btn btn-primary">Sign-up</button></a>
           </div>
         </header>
 

@@ -59,9 +59,9 @@
             <a href="#">Courses</a>
             <a href="#">Pastpapers</a>
             <a href="../common/AboutUs.html">About Us</a>
-            <a href="../common/contact.html">Contact Us</a>
+            <a href="../common/contact.php">Contact Us</a>
             <a href="./login.html">Login</a>
-            <a href="./signup.html">Sign-up</a>
+            <a href="./signup.php">Sign-up</a>
         </div>
     </div>
 </header>

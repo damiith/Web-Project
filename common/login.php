@@ -1,3 +1,6 @@
+<?php
+include_once "dbconnect.php";
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +8,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"rel="stylesheet"/>
     <link rel="stylesheet" href="../css/styles.css">
@@ -31,12 +34,12 @@
             background-repeat: no-repeat;
             background-size: cover;
             padding-top: 10%;
-            padding-bottom: 10%;   
+            padding-bottom: 10%;
         }
 
         .border{
             border: solid cyan 1px;
-        } 
+        }
 
         .error{
     	      color: red;
@@ -51,13 +54,13 @@
     <header class="pb-5">
         <a href="../index.html" class="brand"><img src="../img/zlogo.png" width="250" ></a>
         <div class="menu-btn"></div>
-        
+
         <div class="navigation">
         <div class="navigation-items">
                 <a href="../index.html">Home</a>
                 <a href="./courses/courses.html">Courses</a>
 
-               
+
 
                 <a href="./pastpapers/pastpapers.html">Pastpapers</a>
 
@@ -68,10 +71,10 @@
         </div>
         </div>
     </header>
-    
+
     <section class ="image-cover">
         <div class="border row m-5 p-5 ms-5 me-5">
-            
+
             <div class="col-md-6 p-3 my-auto text-info ">
                 <div class="text-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="10em" height="10em" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
@@ -79,34 +82,34 @@
                         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                         <div class="display-1 text-white">Login</div>
                     </svg>
-                    
+
                 </div>
             </div>
-            
+
             <div class="col-md-6 bg-white p-5 rounded">
-                <form id="signup" action="#" method="POST" >
+                <form id="signup" action="" method="POST" >
                     <div class="p-2 me-5 mb-5">
                         <label class="text-dark" for="username">Username</label>
                         <input type="text"  name="username" id="name" class="form-control">
                     </div>
-    
+
                     <div class="p-2 me-5 mb-5">
                         <label class="text-dark" for="password">Password</label>
                         <input type="password"  name="password"  class="form-control">
                     </div>
-              
+
                     <div class="p-2 mb-3 text-center">
-                    <button type="submit"  class="btn btn-lg btn-primary ">Login ➠</button>
+                    <button type="submit"  name = "login" class="btn btn-lg btn-primary ">Login ➠</button>
                     </div>
                 </form>
             </div>
         </div>
     </section>
 
-    
+
          <!--Footer-->
 <footer class="text-center text-lg-start bg-dark text-muted">
-    
+
     <!-- Section: Links  -->
     <section class="footer">
     <div class="container text-center text-md-start mt-5">
@@ -195,8 +198,8 @@
     </div>
     <!-- Copyright -->
     </footer>
-    
-    
+
+
     <script>
 
         //Javascript of responsive navigation menu
@@ -213,7 +216,7 @@
 
     </script>
 
-        
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -248,3 +251,31 @@
   </script>
 </body>
 </html>
+
+<?php
+if(isset($_POST['login'])){
+  $uname = $_POST['username'];
+  $pwd = md5($_POST['password']);
+
+  if($uname == "" && $pwd == ""){
+    echo "<script>alert('Username or Password is Empty!!')</script>";
+  }
+
+  $sql = "SELECT * FROM signup where username = '$uname' AND password = '$pwd'";
+
+  $result = mysqli_query($conn,$sql);
+
+  while($row =mysqli_fetch_array($result)){
+    $dbuname = $row['username'];
+    $dbpwd = $row['password'];
+
+    if($uname == $dbuname && $pwd == $dbpwd){
+      echo "<script>alert('Logged')</script>";
+      header("location:index.html");
+     }
+    else{
+      echo "<script>alert('Username or Password Incorrect!!')</script>";
+     }
+  }
+}
+ ?>

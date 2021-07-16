@@ -56,7 +56,7 @@
     <div class="navigation">
         <div class="navigation-items">
             <a href="../index.html">Home</a>
-            <a href="#">Courses</a>
+            <a href="./courses/courses.html">Courses</a>
             <a href="#">Pastpapers</a>
             <a href="../common/AboutUs.html">About Us</a>
             <a href="../common/contact.php">Contact Us</a>

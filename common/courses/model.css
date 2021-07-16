@@ -12,6 +12,11 @@
 .card{
   height: 400px;
 }
+
+.card-text{
+  color: white;
+}
+
 h5{
   margin-top: 30px;
   font-size: 30px;
@@ -29,7 +34,6 @@ h5:hover{
 }
 p{
     font-family: 'Poppins' , sans-serif;
-    color: white;
     font-size: 20px;
 }
 h4{

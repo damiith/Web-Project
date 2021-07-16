@@ -1,3 +1,6 @@
+<?php
+include_once 'dbconnect.php';
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -114,7 +117,7 @@
 
             <!--Footer-->
 <footer class="text-center text-lg-start bg-dark text-muted">
-    
+
     <!-- Section: Links  -->
     <section class="footer">
     <div class="container text-center text-md-start mt-5">
@@ -203,7 +206,7 @@
     </div>
     <!-- Copyright -->
     </footer>
-    
+
 <script>
 
 //Javascript of responsive navigation menu

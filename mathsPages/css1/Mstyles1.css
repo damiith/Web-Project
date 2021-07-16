@@ -175,3 +175,23 @@
 
 
 }
+@media only screen and (max-width:550px ){
+.social li button{
+    height: 70px;
+    width: 170px;
+    margin-right: 40px;
+}
+
+.text p{
+    font-size: 12px;
+   
+}
+.social li{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.text h3{
+    font-size: 20px;
+}
+
+}

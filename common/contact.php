@@ -32,7 +32,7 @@
               </ul>
             </li>
             <li><a href="#" class="nav-link px-2 text-dark"></a></li>
-            <li><a href="#" class="nav-link px-2 text-white">Pastpapers</a></li>
+            <li><a href="./pastpapers/pastpapers.html" class="nav-link px-2 text-white">Pastpapers</a></li>
             <li><a href="#" class="nav-link px-2 text-white"></a></li>
             <li><a href="AboutUs.html" class="nav-link px-2 text-white">About Us</a></li>
             <li><a href="#" class="nav-link px-2 text-white"></a></li>

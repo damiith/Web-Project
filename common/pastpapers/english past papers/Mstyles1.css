@@ -1,0 +1,153 @@
+/*universal selector*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' , sans-serif;
+} /*universal selector*/
+
+body{
+    background-image: url(pp.jpg);
+    background-size:cover;
+
+}
+
+
+.showcase header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 23px;
+    font-weight: 750;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+.text{
+    position: relative;
+    z-index: 10;
+}
+
+.text h2{
+    font-size: 4em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text h3{
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.text p{
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: 400;
+    max-width: 700px;
+}
+
+.text a{
+    
+}
+
+.text a:hover{
+    letter-spacing: 6px;
+}
+
+.social{
+}
+
+.social li{
+    list-style: none;
+}
+
+.social li a{
+    display: inline-block;
+    margin-right: 20px;
+    transform: scale(0.5);
+    transition: 0.5s;
+}
+.social li{
+    width: 100%;
+    border: 1px solid white;
+    list-style: none;
+    display: flex;
+}
+.social li button{
+    height: 70px;
+    width: 250px;
+    margin-left: 50px;
+}
+
+.social li a:hover{
+    transform: scale(0.5) translateY(-15px);
+}
+
+
+    .text h2{
+        font-size: 3em;
+    }
+
+    .text h3{
+        font-size: 2em;
+    }
+
+}
+
+.card{
+    padding-left:20px;
+}
+
+.card-body{
+    background-color: black;
+}
+.row1{
+    margin-top: -20px;
+}
+.row2{
+    display: flex;
+    margin-top: -20px;
+}
+.OL{
+    border: 3px solid white;
+
+}
+@media only screen and (max-width:600px ){
+.social li button{
+    height: 70px;
+    width: 200px;
+    margin-right: 40px;
+}
+
+.text p{
+    font-size: 15px;
+   
+}
+.social li{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+}

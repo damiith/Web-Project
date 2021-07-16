@@ -60,7 +60,7 @@ include_once 'dbconnect.php';
         <div class="navigation-items">
             <a href="../index.html">Home</a>
             <a href="./courses/courses.html">Courses</a>
-            <a href="#">Pastpapers</a>
+            <a href="pastpapers/pastpapers.html">Pastpapers</a>
             <a href="../common/AboutUs.html">About Us</a>
             <a href="../common/contact.php">Contact Us</a>
             <a href="./login.php">Login</a>

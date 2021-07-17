@@ -1,5 +1,32 @@
 <?php
-  include_once 'dbconnect.php';
+
+include_once "dbconnect.php";
+
+  if(isset($_POST['Submit'])){
+    $name = $_POST['fname'];
+    $email = $_POST['email'];
+    $msg = $_POST['message'];
+
+    $sql = "INSERT INTO contact_us (name,email,message) VALUES('$name','$email','$msg')";
+
+    if(mysqli_query($conn,$sql)){
+
+      header("refresh:1;url=contact.php");
+      $alert = "Successfully Sended";
+      //echo "<script>alert('Successfully Sended');</script";
+
+      echo "<script>
+              alert('$alert');
+           </script>";
+
+      //include 'redirect/contactusdb.php';
+    }else{
+      echo "<script>alert('Try Again')</script>";
+    }
+  }
+
+  mysqli_close($conn);
+
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +84,7 @@
                     <div class="text">
                         <h3>Address</h3>
                         <p>Mahenwaththa<br>
-                            Pitipana,Homagama,<br> 
+                            Pitipana,Homagama,<br>
                               Sri Lanka</p>
                     </div>
                 </div>
@@ -101,8 +128,8 @@
 
 
     <!--footer-->
-    
-                
+
+
 <footer class="text-center text-lg-start bg-dark text-muted">
   <!-- Section: Social media -->
   <section
@@ -113,7 +140,7 @@
       <span>Get connected with us on social networks:</span>
     </div>
     <!-- Left -->
-    
+
     <!-- Right -->
     <div>
       <a href="https://www.facebook.com/Zero2Hero.lk/" target="_blank" class="me-4 text-reset">
@@ -122,11 +149,11 @@
       <a href="https://twitter.com/Zero2Hero_lk" target="_blank" class="me-4 text-reset">
         <i class="fab fa-twitter"></i>
       </a>
-      
+
       <a href="https://www.instagram.com/zero2hero.lk/" target="_blank" class="me-4 text-reset">
         <i class="fab fa-instagram"></i>
       </a>
-     
+
     </div>
     <!-- Right -->
   </section>
@@ -144,7 +171,7 @@
             <i class="fas fa-gem me-3"></i>Zero2Hero
           </h6>
           <p>
-            Team ZERO2HERO always trying to provide the study meterails and the motivation you need to continue pushing yourself to complete your online education goals.We think there is always something new to learn. 
+            Team ZERO2HERO always trying to provide the study meterails and the motivation you need to continue pushing yourself to complete your online education goals.We think there is always something new to learn.
           </p>
         </div>
         <!-- Grid column -->
@@ -226,23 +253,3 @@
 
 </body>
 </html>
-<?php
-  if(isset($_POST['Submit'])){
-    $name = $_POST['fname'];
-    $email = $_POST['email'];
-    $msg = $_POST['message'];
-
-    $sql = "INSERT INTO contact_us (name,email,message) VALUES('$name','$email','$msg')";
-
-    if(mysqli_query($conn,$sql)){
-
-      echo "<script>alert('Successfully Sended');</script>";
-      //header("Location: login.php");
-    }else{
-      echo "<script>alert('Try Again')</script>";
-    }
-  }
-
-  mysqli_close($conn);
-
- ?>

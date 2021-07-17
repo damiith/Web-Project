@@ -1,5 +1,53 @@
 <?php
 include_once "dbconnect.php";
+
+if(isset($_POST['login'])){
+  $uname = $_POST['username'];
+  $pwd = md5($_POST['password']);
+
+  if($uname == "" && $pwd == ""){
+    echo "<script>alert('Username or Password is Empty!!')</script>";
+  }
+
+  $sql = "SELECT * FROM signup where username = '$uname' AND password = '$pwd'";
+
+  $result = mysqli_query($conn,$sql);
+
+  while($row =mysqli_fetch_array($result)){
+    $dbuname = $row['username'];
+    $dbpwd = $row['password'];
+
+    $alertu = 'Username is incorrect!!';
+    $alertp = 'Password is incorrect!!';
+    $alertl = 'Successfully Logged in';
+
+    if($uname != $dbuname){
+      header("refresh:1;url=login.php");
+      echo "<script>
+              alert('$alertu');
+           </script>";
+    }
+
+    if($pwd != $dbpwd){
+      header("refresh:1;url=login.php");
+      echo "<script>
+              alert('$alertp');
+           </script>";    }
+
+    if($uname == $dbuname && $pwd == $dbpwd){
+      header("refresh:1;url=../index.html");
+      echo "<script>
+              alert('$alertl');
+           </script>";
+     }
+    else{
+      header("refresh:1;url=login.php");
+      echo "<script>
+              alert('$alertu, $alertp');
+           </script>";
+     }
+  }
+}
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -251,31 +299,3 @@ include_once "dbconnect.php";
   </script>
 </body>
 </html>
-
-<?php
-if(isset($_POST['login'])){
-  $uname = $_POST['username'];
-  $pwd = md5($_POST['password']);
-
-  if($uname == "" && $pwd == ""){
-    echo "<script>alert('Username or Password is Empty!!')</script>";
-  }
-
-  $sql = "SELECT * FROM signup where username = '$uname' AND password = '$pwd'";
-
-  $result = mysqli_query($conn,$sql);
-
-  while($row =mysqli_fetch_array($result)){
-    $dbuname = $row['username'];
-    $dbpwd = $row['password'];
-
-    if($uname == $dbuname && $pwd == $dbpwd){
-      echo "<script>alert('Logged')</script>";
-      header("location:index.html");
-     }
-    else{
-      echo "<script>alert('Username or Password Incorrect!!')</script>";
-     }
-  }
-}
- ?>

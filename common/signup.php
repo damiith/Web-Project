@@ -1,5 +1,30 @@
 <?php
-include_once 'dbconnect.php';
+
+  include_once 'dbconnect.php';
+
+  if(isset($_POST['signup'])){
+    $uname = $_POST['username'];
+    $email = $_POST['email'];
+    $pwd = md5($_POST['password']);
+
+    $sql = "INSERT INTO signup (username,email,password) VALUES ('$uname','$email','$pwd')";
+
+    if(mysqli_query($conn,$sql)){
+      $alert = "Successfully Registered";
+      $alertErr = "Try agian";
+
+      header("refresh:1;url=login.php");
+      echo "<script>
+              alert('$alert');
+            </script>";
+    }else{
+      echo "<script>
+              alert('$alertErr');
+            </script>";
+    }
+  }
+
+  mysqli_close($conn);
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -276,24 +301,3 @@ jQuery.validator.addMethod("customEmail", function(value, element) {
 </script>
 </body>
 </html>
-
-<?php
-  if(isset($_POST['signup'])){
-    $uname = $_POST['username'];
-    $email = $_POST['email'];
-    $pwd = md5($_POST['password']);
-
-    $sql = "INSERT INTO signup (username,email,password) VALUES ('$uname','$email','$pwd')";
-
-    if(mysqli_query($conn,$sql)){
-      header("Location:login.php");
-      echo "<script>alert('Successfully Sended')</script>";
-    }else{
-      echo "<script>alert('Try Again')</script>";
-    }
-  }
-
-  mysqli_close($conn);
-
-
- ?>

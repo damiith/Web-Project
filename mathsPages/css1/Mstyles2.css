@@ -188,6 +188,46 @@ a  p{
     width: 140%;  
 }
 
+@media only screen and (max-width : 420px) {
+    .text h4{
+        font-size: 1em;
+    }
+    .text p{
+        font-size: 10px;
+    }
+ .text h3{
+        font-size: 2em;
+    }
+
+.ratio iframe {
+height: 300px;
+}
+.ratio-16x9 iframe{
+height: 300px;
+}
+}
+
+@media only screen and (max-width : 380px) {
+     .text h4{
+        font-size: 1em;
+    }
+    .text p{
+        font-size: 8px;
+    }
+    .text h3{
+        font-size: 2em;
+    }
+
+    .ratio iframe {
+height: 250px;
+}
+.ratio-16x9 iframe{
+height: 250px;
+}
+
+}
+
+
 
 
 
